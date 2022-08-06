@@ -1,2 +1,6 @@
-package facebookclone.facebook.Repository;public interface User {
+package facebookclone.facebook.Repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface User extends MongoRepository<T,ID> {
 }
