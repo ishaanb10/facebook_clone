@@ -17,33 +17,33 @@ class Navbar extends Component{
 render(){
 return(
 <div>
-    <Grid  container class="navbar__main">
+    <Grid  container className="navbar__main">
         <Grid item xs={3}>
-          <div class="navbar_left">
-            <img src={fblogo} class="navbar_logo"/>
-            <input type="input" class ="navbar_search" placeholder="Search Facebook"/>
+          <div className="navbar_left">
+            <img src={fblogo} className="navbar_logo"/>
+            <input type="input" className ="navbar_search" placeholder="Search Facebook"/>
           </div>
 
         </Grid>
         <Grid item xs={6}>
-            <div class="navbar_centre">
-              <div class="navbar_tabs active">
+            <div className="navbar_centre">
+              <div className="navbar_tabs active">
               <img src={home} width="35px" height="35px"/>
               </div>
                
-               <div class="navbar_tabs ">
+               <div className="navbar_tabs ">
                <img src={page} width="35px" height="35px"/>
                </div>
                
-               <div class="navbar_tabs" >
+               <div className="navbar_tabs" >
                <img src={watch} width="35px" height="35px" />
                </div>
               
-              <div class="navbar_tabs ">
+              <div className="navbar_tabs ">
               <img src={market} width="35px" height="35px" />
               </div>
                
-               <div class="navbar_tabs ">
+               <div className="navbar_tabs ">
                <img src={groups} width="35px" height="35px" />
                </div>
                 
@@ -53,10 +53,10 @@ return(
         
         </Grid>
         <Grid item xs={3}>
-            <div class="navbar_right">
-              <div class="navbar_profile">
+            <div className="navbar_right">
+              <div className="navbar_profile">
                 <Avatar className="navbar_profileIcon" src={profile} />
-                <div class="navbar_profileName">Ishaan</div>
+                <div className="navbar_profileName">Ishaan</div>
               </div>
 
 

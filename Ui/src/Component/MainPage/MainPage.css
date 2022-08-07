@@ -1,0 +1,12 @@
+.img_layoutName{
+    margin-top: 18px;
+    
+    }
+.img_layoutProfile{
+    display:flex; 
+    }
+.img_layoutIcon{
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+     }

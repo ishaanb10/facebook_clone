@@ -1,6 +1,8 @@
 import React,{Component} from "react";
 import Grid from '@mui/material/Grid';
-
+import LeftPanel from "./LeftPanel/LeftPanel";
+import StatusBar from "./StatusBar/StatusBar";
+import UploadSection from "./UploadSection/UploadSection";
 
 
 class Layout extends Component {
@@ -13,10 +15,11 @@ class Layout extends Component {
         <div>
             <Grid container>
                 <Grid item xs={3}>
-                    Left 
+                    <LeftPanel/>
                 </Grid>
                 <Grid item xs={6}>
-                    Centre
+                    <StatusBar/>
+                    <UploadSection/>
                 </Grid>
                 <Grid item xs={3}>
                     Right
