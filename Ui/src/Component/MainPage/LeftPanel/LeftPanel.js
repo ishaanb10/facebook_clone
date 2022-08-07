@@ -18,7 +18,7 @@ class  LeftPanel extends Component {
     getLeftMenuItems(){
         var LeftMenuList=[
             {"image":covid,
-              "name": "COVID-19 Info"         
+              "name": "COVID-19 Info"     
             },
             {"image":business,
               "name":"Business"        
