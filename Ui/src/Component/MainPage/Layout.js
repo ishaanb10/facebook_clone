@@ -5,6 +5,7 @@ import StatusBar from "./StatusBar/StatusBar";
 import UploadSection from "./UploadSection/UploadSection";
 import PostSection from "./PostSection/PostSection";
 import '../MainPage/MainPage.css';
+import ContactList from "./ContactList/ContactList";
 
 
 class Layout extends Component {
@@ -25,7 +26,7 @@ class Layout extends Component {
                     <PostSection/>
                 </Grid>
                 <Grid item xs={3}>
-                    Right
+                    <ContactList/>
                 </Grid>
 
             </Grid>
