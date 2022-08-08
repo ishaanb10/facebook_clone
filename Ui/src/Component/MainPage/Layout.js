@@ -16,7 +16,6 @@ class Layout extends Component {
     render() { 
         return ( 
         <div>
-            
             <Grid container>
                 <Grid item xs={3}>
                     <LeftPanel/>
