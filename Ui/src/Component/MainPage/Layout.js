@@ -3,6 +3,8 @@ import Grid from '@mui/material/Grid';
 import LeftPanel from "./LeftPanel/LeftPanel";
 import StatusBar from "./StatusBar/StatusBar";
 import UploadSection from "./UploadSection/UploadSection";
+import PostSection from "./PostSection/PostSection";
+import '../MainPage/MainPage.css';
 
 
 class Layout extends Component {
@@ -17,9 +19,10 @@ class Layout extends Component {
                 <Grid item xs={3}>
                     <LeftPanel/>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} className="middle_container"> 
                     <StatusBar/>
                     <UploadSection/>
+                    <PostSection/>
                 </Grid>
                 <Grid item xs={3}>
                     Right

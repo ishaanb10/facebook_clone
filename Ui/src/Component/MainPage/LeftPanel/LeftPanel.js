@@ -6,6 +6,9 @@ import blood from "../../../images /blood.png";
 import admanager from "../../../images /admanager.png";
 import ads from "../../../images /ads.png";
 import kids from "../../../images /messengerkids.png";
+import memories from "../../../images /memories.png";
+import market from "../../../images /market.svg";
+import pages from "../../../images /pages.png";
 import '../../Navbar/Navbar.css';
 class  LeftPanel extends Component {
     constructor(props) {
@@ -16,6 +19,7 @@ class  LeftPanel extends Component {
     }
    
     getLeftMenuItems(){
+        
         var LeftMenuList=[
             {"image":covid,
               "name": "COVID-19 Info"     
@@ -37,6 +41,13 @@ class  LeftPanel extends Component {
             {"image":kids,
               "name":"Messenger For Kids"          
             },
+
+            {"image":memories,
+              "name":"Memories"          
+            },
+            {"image":pages,
+              "name":"Pages"          
+            }
 
 
         ];

@@ -10,3 +10,7 @@
     margin-right: 5px;
     margin-left: 10px;
      }
+.middle_container{
+    height: 100vh;
+    overflow-y:auto;
+}
