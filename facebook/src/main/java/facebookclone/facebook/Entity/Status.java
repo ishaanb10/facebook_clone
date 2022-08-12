@@ -2,7 +2,8 @@ package facebookclone.facebook.Entity;
 
 import org.springframework.data.annotation.Id;
 
-import java.security.Timestamp;
+
+import java.sql.Timestamp;
 import java.util.UUID;
 
 public class Status {
@@ -10,7 +11,7 @@ public class Status {
     private UUID statusID;
     private String userID;
     private String statusImageURL;
-    private Timestamp uploadTIme;
+    private Timestamp uploadTime;
 
     public UUID getStatusID() {
         return statusID;
@@ -37,17 +38,17 @@ public class Status {
     }
 
     public Timestamp getUploadTIme() {
-        return uploadTIme;
+        return uploadTime;
     }
 
-    public void setUploadTIme(Timestamp uploadTIme) {
-        this.uploadTIme = uploadTIme;
+    public void setUploadTIme(Timestamp uploadTime) {
+        this.uploadTime = uploadTime;
     }
 
-    public Status(UUID statusID, String userID, String statusImageURL, Timestamp uploadTIme) {
+    public Status(UUID statusID, String userID, String statusImageURL, Timestamp uploadTime) {
         this.statusID = statusID;
         this.userID = userID;
         this.statusImageURL = statusImageURL;
-        this.uploadTIme = uploadTIme;
+        this.uploadTime = uploadTime;
     }
 }
