@@ -2,7 +2,8 @@ package facebookclone.facebook.Entity;
 
 import org.springframework.data.annotation.Id;
 
-import java.security.Timestamp;
+
+import java.sql.Timestamp;
 import java.util.UUID;
 
 public class Post {
@@ -14,10 +15,10 @@ public class Post {
     private String imageURL;
 
     private String description;
-    private String postImgURL;
+
 
     private int likes;
-    private Timestamp dateTime;
+//    private Timestamp dateTime;
 
     public UUID getPostID() {
         return postID;
@@ -59,14 +60,6 @@ public class Post {
         this.description = description;
     }
 
-    public String getPostImgURL() {
-        return postImgURL;
-    }
-
-    public void setPostImgURL(String postImgURL) {
-        this.postImgURL = postImgURL;
-    }
-
     public int getLikes() {
         return likes;
     }
@@ -75,22 +68,23 @@ public class Post {
         this.likes = likes;
     }
 
-    public Timestamp getDateTime() {
-        return dateTime;
-    }
+//   // public Timestamp getDateTime() {
+//        return dateTime;
+//    }
 
-    public void setDateTime(Timestamp dateTime) {
-        this.dateTime = dateTime;
-    }
+//   // public void setDateTime(Timestamp dateTime) {
+//        this.dateTime = dateTime;
+//    }
 
-    public Post(UUID postID, String userID, String userName, String imageURL, String description, String postImgURL, int likes, Timestamp dateTime) {
+    public Post(UUID postID, String userID, String userName, String imageURL, String description, int likes) {
         this.postID = postID;
         this.userID = userID;
         this.userName = userName;
         this.imageURL = imageURL;
         this.description = description;
-        this.postImgURL = postImgURL;
+
         this.likes = likes;
-        this.dateTime = dateTime;
+       // this.dateTime = dateTime;
     }
+
 }
