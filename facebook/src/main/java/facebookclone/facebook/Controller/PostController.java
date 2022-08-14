@@ -2,6 +2,7 @@ package facebookclone.facebook.Controller;
 
 import facebookclone.facebook.Entity.Post;
 import facebookclone.facebook.Services.PostService;
+import jdk.jfr.StackTrace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,17 +16,18 @@ public class PostController {
     @Autowired
    private PostService postService;
 
-    @PostMapping("/save")
-    public List<Post> savePost(@RequestBody Post post){
+    @PostMapping("/save/{userId}")
+    public List<Post> savePost(@RequestBody Post post, @PathVariable String userId){
+        post.setUserID(userId);
         return postService.save(post);
     }
 
-  @GetMapping("/AllPost")
-    public List<Post> getALl(){
-        return postService.find();
+  @GetMapping("/AllPost/{userId}")
+    public List<Post> getALl(@PathVariable String userID){
+        return postService.find(userID);
   }
-  @DeleteMapping("/delete/{postId}")
-    public List<Post>delete(@PathVariable UUID postId){
-        return postService.delete(postId);
+  @DeleteMapping("/delete/{userId}/{postId}")
+    public List<Post>delete(@PathVariable String postId,@PathVariable String userId){
+        return postService.delete(postId,userId);
   }
 }

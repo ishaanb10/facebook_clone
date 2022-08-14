@@ -1,8 +1,12 @@
 package facebookclone.facebook.Entity;
 
-import java.security.Timestamp;
+
+import org.springframework.data.annotation.Id;
+
+import java.sql.Timestamp;
 
 public class User {
+    @Id
     private String userID;
 
     private String userName;
