@@ -3,12 +3,13 @@ package facebookclone.facebook.Entity;
 import org.springframework.data.annotation.Id;
 
 
+import java.util.Date;
 import java.sql.Timestamp;
 import java.util.UUID;
 
 public class Post {
     @Id
-    private UUID postID;
+    private String postID;
 
     private String userID;
     private String userName;
@@ -18,13 +19,13 @@ public class Post {
 
 
     private int likes;
-//    private Timestamp dateTime;
+    private Date dateTime;
 
-    public UUID getPostID() {
+    public String getPostID() {
         return postID;
     }
 
-    public void setPostID(UUID postID) {
+    public void setPostID(String postID) {
         this.postID = postID;
     }
 
@@ -68,15 +69,15 @@ public class Post {
         this.likes = likes;
     }
 
-//   // public Timestamp getDateTime() {
-//        return dateTime;
-//    }
+    public Date getDateTime() {
+        return dateTime;
+    }
 
-//   // public void setDateTime(Timestamp dateTime) {
-//        this.dateTime = dateTime;
-//    }
+    public void setDateTime(Date dateTime) {
+        this.dateTime = dateTime;
+    }
 
-    public Post(UUID postID, String userID, String userName, String imageURL, String description, int likes) {
+    public Post(String postID, String userID, String userName, String imageURL, String description, int likes,Date dateTime) {
         this.postID = postID;
         this.userID = userID;
         this.userName = userName;
@@ -84,7 +85,7 @@ public class Post {
         this.description = description;
 
         this.likes = likes;
-       // this.dateTime = dateTime;
+        this.dateTime = dateTime;
     }
 
 }

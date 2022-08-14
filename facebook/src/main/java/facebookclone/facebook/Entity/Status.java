@@ -3,21 +3,22 @@ package facebookclone.facebook.Entity;
 import org.springframework.data.annotation.Id;
 
 
-import java.sql.Timestamp;
+import java.sql.Date;
+
 import java.util.UUID;
 
 public class Status {
     @Id
-    private UUID statusID;
+    private String statusID;
     private String userID;
     private String statusImageURL;
-    private Timestamp uploadTime;
+    private Date uploadTime;
 
-    public UUID getStatusID() {
+    public String getStatusID() {
         return statusID;
     }
 
-    public void setStatusID(UUID statusID) {
+    public void setStatusID(String statusID) {
         this.statusID = statusID;
     }
 
@@ -37,15 +38,15 @@ public class Status {
         this.statusImageURL = statusImageURL;
     }
 
-    public Timestamp getUploadTIme() {
+    public Date getUploadTime() {
         return uploadTime;
     }
 
-    public void setUploadTIme(Timestamp uploadTime) {
+    public void setUploadTime(Date uploadTime) {
         this.uploadTime = uploadTime;
     }
 
-    public Status(UUID statusID, String userID, String statusImageURL, Timestamp uploadTime) {
+    public Status(String statusID, String userID, String statusImageURL, Date uploadTime) {
         this.statusID = statusID;
         this.userID = userID;
         this.statusImageURL = statusImageURL;

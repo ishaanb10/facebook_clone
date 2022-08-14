@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-import java.sql.Timestamp;
 import java.util.Date;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
 @Service
@@ -17,19 +17,23 @@ public class PostService {
     private  PostRepo postRepo;
 
     public List<Post> save(Post post){
-       // post.setLikes(0);
-       // post.setDateTime(new Timestamp(System.currentTimeMillis()));
+        Date date=new Date(System.currentTimeMillis());
+      //  long now =date.getTime();
+        //Timestamp timestamp=new Timestamp(now);
         post.setLikes(0);
-        post.setPostID(UUID.randomUUID());
+        post.setDateTime(date);
+        post.setPostID(UUID.randomUUID().toString());
         postRepo.save(post);
-        return find();
+        return find(post.getUserID());
     }
 
-    public List<Post> find(){
-        return postRepo.findAll();
+    public List<Post> find(String userId){
+        List<Post> allPosts=postRepo.findByUserId(userId);
+       allPosts.sort((Post p1 ,Post p2)->p1.getDateTime().compareTo(p2.getDateTime()));
+        return allPosts;
     }
-    public List<Post>delete(UUID postId){
+    public List<Post>delete(String postId,String userId){
         postRepo.deleteById(postId);
-        return find();
+        return find(userId);
     }
 }

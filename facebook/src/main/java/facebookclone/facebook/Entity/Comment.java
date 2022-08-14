@@ -9,17 +9,17 @@ import java.util.UUID;
 public class Comment {
     //commentid(uuid) postid(uuid) userid(string) username(string) userImage(string url)
     @Id
-    private UUID commentId;
-    private UUID postId;
+    private String commentId;
+    private String postId;
     private String userId;
     private String userName;
     private String userImage;
 
-    public UUID getCommentId() {
+    public String getCommentId() {
         return commentId;
     }
 
-    public UUID getPostId() {
+    public String getPostId() {
         return postId;
     }
 
@@ -35,11 +35,11 @@ public class Comment {
         return userImage;
     }
 
-    public void setCommentId(UUID commentId) {
+    public void setCommentId(String commentId) {
         this.commentId = commentId;
     }
 
-    public void setPostId(UUID postId) {
+    public void setPostId(String postId) {
         this.postId = postId;
     }
 
@@ -55,7 +55,7 @@ public class Comment {
         this.userImage = userImage;
     }
 
-    public Comment(UUID commentId, UUID postId, String userId, String userName, String userImage) {
+    public Comment(String commentId, String postId, String userId, String userName, String userImage) {
         this.commentId = commentId;
         this.postId = postId;
         this.userId = userId;
