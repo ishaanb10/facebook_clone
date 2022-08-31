@@ -11,15 +11,16 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/Post")
 public class PostController {
     @Autowired
    private PostService postService;
 
     @PostMapping("/save/{userId}")
-    public List<Post> savePost(@RequestBody Post post, @PathVariable String userId){
+    public void savePost(@RequestBody Post post, @PathVariable String userId){
         post.setUserID(userId);
-        return postService.save(post);
+        postService.save(post);
     }
 
   @GetMapping("/AllPost/{userId}")

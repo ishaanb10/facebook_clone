@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/comments")
 public class CommentController {
     @Autowired
@@ -31,4 +32,6 @@ public class CommentController {
     List<Comment> getAll(@PathVariable String postId){
         return commentService.findAll(postId);
     }
+
+
 }

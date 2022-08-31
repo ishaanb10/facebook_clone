@@ -5,11 +5,10 @@ import facebookclone.facebook.Repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Date;
-import java.sql.Timestamp;
+import java.util.Date;
+
 import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+
 
 @Service
 public class UserService {
@@ -18,10 +17,8 @@ public class UserService {
 
    public User saveMetaData(User user){
        Date date=new Date(System.currentTimeMillis());
-       long now =date.getTime();
-       Timestamp timestamp=new Timestamp(now);
-       user.setJoiningDate(timestamp);
-       user.setUserID(UUID.randomUUID().toString());
+
+       user.setJoiningDate(date);
         return userRepo.save(user);
     }
     public List<User> getAllUsers(){
@@ -29,6 +26,6 @@ public class UserService {
     }
 
     public User findUserById(String userID){
-        return userRepo.findUser(userID);
+        return userRepo.findById(userID).get();
     }
 }

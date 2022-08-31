@@ -8,6 +8,4 @@ import java.util.UUID;
 
 
 public interface UserRepo extends MongoRepository<User, String>{
-    @Query("{userID:?0}")
-    User findUser(String userId);
 }

@@ -10,4 +10,6 @@ import java.util.UUID;
 public interface CommentRepo extends MongoRepository<Comment, String> {
     @Query("{postId:?0}")
     List<Comment>findByPostId(String postId);
+    @Query(value = "{userID:?0}",delete = true)
+    void deleteAllComments(String userId);
 }
