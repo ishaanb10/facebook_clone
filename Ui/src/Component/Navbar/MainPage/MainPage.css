@@ -1,0 +1,17 @@
+.img_layoutName{
+    margin-top: 18px;
+    
+    }
+.img_layoutProfile{
+    display:flex; 
+    }
+.img_layoutIcon{
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+     }
+.middle_container{
+    height: 100vh;
+    overflow-y:auto;
+    background-color:#EFF2F5;
+}

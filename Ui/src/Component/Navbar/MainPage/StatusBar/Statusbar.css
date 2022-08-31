@@ -1,0 +1,10 @@
+.status{
+    height: 200px;
+    width: 120px;
+    margin: 20px 5px;
+    border-radius: 5px;
+}
+.status_barcontainer{
+    display: flex;
+    overflow-x:auto;
+}
