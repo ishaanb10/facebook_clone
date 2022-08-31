@@ -16,7 +16,7 @@ public class PostService {
     @Autowired
     private  PostRepo postRepo;
 
-    public List<Post> save(Post post){
+    public void save(Post post){
         Date date=new Date(System.currentTimeMillis());
       //  long now =date.getTime();
         //Timestamp timestamp=new Timestamp(now);
@@ -24,7 +24,7 @@ public class PostService {
         post.setDateTime(date);
         post.setPostID(UUID.randomUUID().toString());
         postRepo.save(post);
-        return find(post.getUserID());
+
     }
 
     public List<Post> find(String userId){
@@ -35,5 +35,10 @@ public class PostService {
     public List<Post>delete(String postId,String userId){
         postRepo.deleteById(postId);
         return find(userId);
+    }
+
+    public void deleteALlPosts(String userId){
+        postRepo.deleteAllPosts(userId);
+
     }
 }

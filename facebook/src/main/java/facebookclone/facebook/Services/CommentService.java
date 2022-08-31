@@ -20,4 +20,8 @@ public class CommentService {
    public Comment save(Comment comment){
        return commentRepo.save(comment);
     }
+
+    public void deleteAll(String userID){
+        commentRepo.deleteAllComments(userID);
+    }
 }

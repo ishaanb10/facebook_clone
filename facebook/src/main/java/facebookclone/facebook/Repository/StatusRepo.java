@@ -8,6 +8,10 @@ import java.util.List;
 import java.util.UUID;
 
 public interface StatusRepo extends MongoRepository<Status, UUID> {
-    @Query("{userId:?0}")
-    List<Status>getAll(String userId);
+    @Query("{userID:?0}")
+    List<Status>getAll(String userID);
+
+    @Query(value = "{userID:?0}",delete = true)
+    void deleteAllStatus(String userID);
+
 }

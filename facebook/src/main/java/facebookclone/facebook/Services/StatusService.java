@@ -31,5 +31,8 @@ public class StatusService {
        status.sort((Status s1,Status s2 )->s1.getUploadTime().compareTo(s2.getUploadTime()));
        return status;
     }
+    public void deleteAllStatus(String userID){
+        statusRepo.deleteAllStatus(userID);
+    }
 
 }
